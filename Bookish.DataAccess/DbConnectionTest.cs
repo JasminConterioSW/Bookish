@@ -19,9 +19,10 @@ namespace Bookish.DataAccess
             {
                 db.Open();
                 //var result = db.Query<string>("SELECT Title FROM Book").First();
-                var result = db.Query<dbModels.Book>("SELECT * FROM Book").First();
+                //var result = db.Query<dbModels.Book>("SELECT * FROM Book").First();
+                var result = db.Query<dbModels.Book>("SELECT * FROM Book");
                 
-                Console.WriteLine(result.Title);
+                Console.WriteLine(result);
             }
         }
     }

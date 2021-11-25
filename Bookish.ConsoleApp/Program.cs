@@ -11,8 +11,9 @@ namespace Bookish.ConsoleApp
     {
         static void Main(string[] args)
         {
-            Bookish.DataAccess.DbConnectionTest.TestDbConnection();
-            //Bookish.DataAccess.DbConnectionTest.TestDbConnection();
+            var searcher = new Searches();
+            searcher.PrintAllBooks();
+  //          Bookish.DataAccess.DbConnectionTest.TestDbConnection();
         }
     }
 }
