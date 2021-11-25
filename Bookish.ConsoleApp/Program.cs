@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using Dapper;
+using Bookish.DataAccess;
 
 namespace Bookish.ConsoleApp
 {
@@ -6,7 +11,10 @@ namespace Bookish.ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Bookish.DataAccess.DbConnectionTest.TestDbConnection();
+            //Bookish.DataAccess.DbConnectionTest.TestDbConnection();
         }
     }
 }
+
+
