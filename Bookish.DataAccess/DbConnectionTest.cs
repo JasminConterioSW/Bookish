@@ -18,9 +18,10 @@ namespace Bookish.DataAccess
             using (IDbConnection db = new SqlConnection("Server=localhost;Trusted_Connection=true"))
             {
                 db.Open();
-                //var result = db.Query<string>("SELECT 'Hello World'").Single();
-                var result = db.Query<string>("SELECT Title FROM Book").First();
-                Console.WriteLine(result);
+                //var result = db.Query<string>("SELECT Title FROM Book").First();
+                var result = db.Query<dbModels.Book>("SELECT * FROM Book").First();
+                
+                Console.WriteLine(result.Title);
             }
         }
     }

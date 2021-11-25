@@ -1,0 +1,9 @@
+﻿namespace Bookish.DataAccess.dbModels
+{
+    public class Book
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Isbn { get; set; }
+    }
+}
