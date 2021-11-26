@@ -13,7 +13,8 @@ namespace Bookish.DataAccess.Models
     {
         
         public string BookTitle { get; set; }
-        public IEnumerable<List<string>> AuthorNames { get; set; }
+        //public IEnumerable<List<string>> AuthorNames { get; set; }
+        public List<string> AuthorNames { get; set; }
         public int NCopies { get; set; }
         public int NAvailableCopies { get; set; }
 
@@ -34,10 +35,18 @@ namespace Bookish.DataAccess.Models
                             FROM Book 
                             WHERE ID = @BookId", parameters2).First();
 
-            AuthorNames = db.Query<List<string>>(@"SELECT AuthorName
+           
+            
+            var result = db.Query(@"SELECT AuthorName
                                 FROM Author
                                 INNER JOIN AuthorBook AB on Author.Id = AB.AuthorId
                                 WHERE AB.BookId = @BookId",parameters2);
+            AuthorNames = new List<string>();
+            foreach (var r in result)
+            {
+                AuthorNames.Add(r.AuthorName);
+
+            }
             
             NCopies = db.Query<int>(@"SELECT COUNT(Id)
                                     FROM Book

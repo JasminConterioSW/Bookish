@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Bookish.DataAccess.Clients;
 using Bookish.DataAccess.dbModels;
+using Bookish.DataAccess.Models;
 
 namespace Bookish.Web.Services
 {
@@ -16,6 +17,11 @@ namespace Bookish.Web.Services
         public List<Book> GetAllBooks()
         {
             return _dbClient.GetAllBooks();
+        }
+
+        public List<BookTitleAuthorNames> GetAllUniqueBooks()
+        {
+            return _dbClient.GetAllUniqueBooks();
         }
 
     }

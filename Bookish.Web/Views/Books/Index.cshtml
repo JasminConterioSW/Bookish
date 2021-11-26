@@ -1,15 +1,42 @@
-﻿@model List<Bookish.DataAccess.dbModels.Book>
+﻿@model List<Bookish.DataAccess.Models.BookTitleAuthorNames>
 @{
     ViewData["Title"] = "Library Books";
 }
 
 <div class="text-left">
-    <ul>
+    @*<ul>
         @foreach (var book in Model)
         {
             <li>@book.Title</li>
         }
             
-    </ul>
+    </ul>*@
+    <table>
+        <tr>
+            <th>Book Title</th>
+            <th>Author(s)</th>
+            <th>Copies Available</th>
+        </tr>
+        
+        @foreach (var book in Model)
+                {
+                    <tr>
+                    
+                    
+                        <td>@book.BookTitle</td>
+                        <td>@foreach (var author in book.AuthorNames)
+                            {
+                                @author.ToString()
+                            }
+                        </td>
+                        <td>@book.NAvailableCopies</td>
+                        
+                    </tr>
+
+
+                }
+        
+        
+    </table>
     
 </div>

@@ -17,7 +17,7 @@ namespace Bookish.WebAuth.Controllers
 
         public IActionResult Index()
         {
-            var books = _bookService.GetAllBooks();
+            var books = _bookService.GetAllUniqueBooks();
             return View(books);
         }
     }

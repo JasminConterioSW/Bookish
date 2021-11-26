@@ -24,7 +24,11 @@ namespace Bookish.ConsoleApp
 
             foreach (var book in allBooks)
             {
-                Console.WriteLine($"{book.BookTitle} : by {book.AuthorNames} : Available copies {book.NAvailableCopies}");
+                Console.WriteLine($"{book.BookTitle} : Available copies {book.NAvailableCopies}");
+                /*foreach (var author in book.AuthorNames)
+                {
+                    Console.WriteLine(author);
+                }*/
             }
         }
         
