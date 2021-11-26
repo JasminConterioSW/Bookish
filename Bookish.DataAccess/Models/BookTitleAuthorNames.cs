@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -26,10 +27,8 @@ namespace Bookish.DataAccess.Models
                 FROM Book
                 WHERE ISBN = @Isbn", parameters).First(); // get the ID of one copy of the book with this ISBN*/ 
 
-            var parameters2 = new {Isbn = isbn, BookID = sampleBookId}; 
-
+            var parameters2 = new {Isbn = isbn, BookID = sampleBookId};
             
-
             
             BookTitle = db.Query<string>(@"SELECT Title 
                             FROM Book 
@@ -44,18 +43,16 @@ namespace Bookish.DataAccess.Models
                                     FROM Book
                                     WHERE ISBN = @Isbn
                                     GROUP BY ISBN", parameters2).First();
-            
-            /*
-            NCopies = db.Query<int>(@"SELECT COUNT(Id)
-                                    FROM Book
-                                    WHERE ISBN = '978-0756404079'
-                                    GROUP BY ISBN
-                                    ").First();
-                                    */
-            
-            
-            
+
+           
+            NAvailableCopies = NCopies - db.Query<int>(@"
+                            SELECT COUNT(Loan.Id)
+                            From Loan
+                            INNER JOIN Book B on Loan.BookId = B.Id
+                            WHERE B.ISBN = @Isbn", parameters2).First();
 
         }
+
+
     }
 }
