@@ -4,13 +4,6 @@
 }
 
 <div class="text-left">
-    @*<ul>
-        @foreach (var book in Model)
-        {
-            <li>@book.Title</li>
-        }
-            
-    </ul>*@
     <table>
         <tr>
             <th>Book Title</th>
@@ -27,6 +20,8 @@
                         <td>@foreach (var author in book.AuthorNames)
                             {
                                 @author.ToString()
+                                <BR>
+
                             }
                         </td>
                         <td>@book.NAvailableCopies</td>

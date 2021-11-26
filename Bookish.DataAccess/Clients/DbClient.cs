@@ -34,7 +34,7 @@ namespace Bookish.DataAccess.Clients
         public List<BookTitleAuthorNames> GetAllUniqueBooks()
         {
             // Aim here is to list library books (one entry for each book isbn).
-            // Eventually List title, author(s), number of copies library has, number of books available.
+            // Returns title, author(s), number of copies library has, number of books available.
             List<BookTitleAuthorNames> libraryBooks = new List<BookTitleAuthorNames>();
             
             List<ISBN> isbns = GetISBNs();
