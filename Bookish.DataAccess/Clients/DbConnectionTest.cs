@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using Dapper;
 
 namespace Bookish.DataAccess.Clients
@@ -18,7 +19,8 @@ namespace Bookish.DataAccess.Clients
                 db.Open();
                 //var result = db.Query<string>("SELECT Title FROM Book").First();
                 //var result = db.Query<dbModels.Book>("SELECT * FROM Book").First();
-                var result = db.Query<dbModels.Book>("SELECT * FROM Book");
+                //var result = db.Query<dbModels.Book>("SELECT * FROM Book");
+                var result = db.Query(@"SELECT Title FROM Book WHERE Id = 1").First();
                 
                 Console.WriteLine(result);
             }
