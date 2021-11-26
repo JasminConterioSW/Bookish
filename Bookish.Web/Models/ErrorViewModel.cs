@@ -1,6 +1,6 @@
 using System;
 
-namespace Bookish.Web.Models
+namespace Bookish.WebAuth.Models
 {
     public class ErrorViewModel
     {

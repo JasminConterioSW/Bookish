@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace Bookish.Web.Controllers
+namespace Bookish.WebAuth.Controllers
 {
     public class BooksController : Controller
     {

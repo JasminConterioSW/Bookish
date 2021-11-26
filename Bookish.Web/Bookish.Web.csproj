@@ -2,14 +2,24 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
+        <UserSecretsId>aspnet-Bookish.WebAuth-CD0E4FE8-A024-4E68-AE64-DE8509ABB4E4</UserSecretsId>
+        <RootNamespace>Bookish.WebAuth</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Bookish.DataAccess\Bookish.DataAccess.csproj" />
+        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
     </ItemGroup>
 
     <ItemGroup>
-      <_ContentIncludedByDefault Remove="Views\Books\Index.cshtml" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.12" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.12" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.12" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.12" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.12" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Bookish.DataAccess\Bookish.DataAccess.csproj" />
     </ItemGroup>
 
 </Project>

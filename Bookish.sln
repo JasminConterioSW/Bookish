@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookish.ConsoleApp", "Booki
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookish.DataAccess", "Bookish.DataAccess\Bookish.DataAccess.csproj", "{39D79E56-706B-4D95-B843-D055A5ADD4C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookish.Web", "Bookish.Web\Bookish.Web.csproj", "{78D8508F-9E7C-4A88-8FFD-AC131B169201}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookish.Web", "Bookish.Web\Bookish.Web.csproj", "{28F28DB2-DF5F-4610-B2EB-06B636AE6B17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,9 +20,9 @@ Global
 		{39D79E56-706B-4D95-B843-D055A5ADD4C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39D79E56-706B-4D95-B843-D055A5ADD4C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39D79E56-706B-4D95-B843-D055A5ADD4C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{78D8508F-9E7C-4A88-8FFD-AC131B169201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{78D8508F-9E7C-4A88-8FFD-AC131B169201}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{78D8508F-9E7C-4A88-8FFD-AC131B169201}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{78D8508F-9E7C-4A88-8FFD-AC131B169201}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28F28DB2-DF5F-4610-B2EB-06B636AE6B17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28F28DB2-DF5F-4610-B2EB-06B636AE6B17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28F28DB2-DF5F-4610-B2EB-06B636AE6B17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28F28DB2-DF5F-4610-B2EB-06B636AE6B17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
