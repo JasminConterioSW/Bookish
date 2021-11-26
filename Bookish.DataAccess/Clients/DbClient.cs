@@ -10,7 +10,7 @@ namespace Bookish.DataAccess.Clients
     
     
     
-    public class QueryDb
+    public class DbClient
     {
 
         private string SqlConnectionString = "Server=localhost;Trusted_Connection=true";

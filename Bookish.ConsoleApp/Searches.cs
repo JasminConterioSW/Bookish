@@ -7,7 +7,7 @@ namespace Bookish.ConsoleApp
     {
         public void PrintAllBooks()
         {
-            var dbClient = new QueryDb();
+            var dbClient = new DbClient();
             var allBooks = dbClient.GetAllBooks();
 
             foreach (var book in allBooks)
@@ -19,7 +19,7 @@ namespace Bookish.ConsoleApp
 
         public void PrintAllUniqueBooks()
         {
-            var dbClient = new QueryDb();
+            var dbClient = new DbClient();
             var allBooks = dbClient.GetAllUniqueBooks();
 
             foreach (var book in allBooks)
