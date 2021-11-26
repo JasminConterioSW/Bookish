@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using Bookish.DataAccess.dbModels;
 using Bookish.DataAccess.Models;
 using Dapper;
@@ -47,11 +48,11 @@ namespace Bookish.DataAccess.Clients
                     libraryBooks.Add(new BookTitleAuthorNames(db, i.Isbn));
                 }
             }
-            
 
 
+            List<BookTitleAuthorNames> test = libraryBooks.OrderBy(o => o.BookTitle).ToList();
 
-            return libraryBooks;
+            return test;
         }
 
         private List<ISBN> GetISBNs()
@@ -67,6 +68,9 @@ namespace Bookish.DataAccess.Clients
 
             return isbns;
         }
+        
+ 
+        
         
     }
 }

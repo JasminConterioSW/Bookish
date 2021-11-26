@@ -4,12 +4,12 @@ using Microsoft.Extensions.Logging;
 
 namespace Bookish.WebAuth.Controllers
 {
-    public class BooksController : Controller
+    public class CatalogueController : Controller
     {
         private readonly ILogger<HomeController> _logger;
         private BookService _bookService;
 
-        public BooksController(ILogger<HomeController> logger)
+        public CatalogueController(ILogger<HomeController> logger)
         {
             _logger = logger;
             _bookService = new BookService();
