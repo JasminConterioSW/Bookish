@@ -13,7 +13,8 @@ namespace Bookish.ConsoleApp
         {
             var searcher = new Searches();
             searcher.PrintAllBooks();
-  //          Bookish.DataAccess.DbConnectionTest.TestDbConnection();
+            //searcher.PrintAllUniqueBooks();
+
         }
     }
 }

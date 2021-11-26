@@ -1,0 +1,34 @@
+
+=========================================
+Want a list of books and their authors.
+
+books may have multiple authors.
+
+Console App Model might want book + list of authors
+
+Db.AuthorBookId has the IDs of books and authors - books with n authors have n entries.
+
+Db.BookTitleAuthorName - does this need to match that? Depends on the query
+
+
+
+Might want it to have one entry per book, with a list of authors
+
+I think we do a Model (not a DbModel) of BookTitleAuthorNames
+With title and List<authornames>
+Maybe also with number of copies
+
+Populate this by:
+Q: Get a list of books grouped by ISBN (need to populate this field), count number in each group - this should give a list of books and count the copies.
+For each of those books, populate a BookTitleAuthorNames object (use constructor)
+	Q look in AuthorBook to get all the authorsIDs for each book.
+	Q Authors to get author names
+	Q Books to get Title (might be able to combine some of these steps)
+
+This is a C#y class rather than a Db class. Put the methods for populating it in hte BookTitleAuthorNames class? Is this going to be a constructor?
+
+=================================================
+(Console App might want author + list of books - but this is for another query)
+
+==================================
+May want to move the query bits to a client directory

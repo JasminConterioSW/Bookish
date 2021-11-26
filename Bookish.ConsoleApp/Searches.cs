@@ -1,4 +1,5 @@
 ﻿using System;
+using Bookish.DataAccess.Clients;
 
 namespace Bookish.ConsoleApp
 {
@@ -6,7 +7,7 @@ namespace Bookish.ConsoleApp
     {
         public void PrintAllBooks()
         {
-            var dbClient = new Bookish.DataAccess.QueryDb();
+            var dbClient = new QueryDb();
             var allBooks = dbClient.GetAllBooks();
 
             foreach (var book in allBooks)
@@ -15,5 +16,17 @@ namespace Bookish.ConsoleApp
             }
             
         }
+
+        public void PrintAllUniqueBooks()
+        {
+            var dbClient = new QueryDb();
+            var allBooks = dbClient.GetAllUniqueBooks();
+
+            foreach (var book in allBooks)
+            {
+                Console.WriteLine(book.BookTitle);
+            }
+        }
+        
     }
 }
